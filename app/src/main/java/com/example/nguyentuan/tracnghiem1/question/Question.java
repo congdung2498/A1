@@ -13,34 +13,46 @@ public class Question implements Serializable{
     private  String ans_b;
     private  String ans_c;
     private  String ans_d;
-    private  String result;
+    private  String result1;
+    private  String result2;
     private  int num_exam;
     private  String subject;
     private  String image;
-    private String traloi="";
+    private String traloi1="";
+    private String traloi2="";
     public int choiceID= -1; //hỗ trợ check Id của radiogroup
 
-    public String getTraloi() {
-        return traloi;
+    public String getTraloi1() {
+        return traloi1;
     }
 
-    public void setTraloi(String traloi) {
-        this.traloi = traloi;
+    public void setTraloi1(String traloi1) {
+        this.traloi1 = traloi1;
+    }
+
+    public String getTraloi2() {
+        return traloi2;
+    }
+
+    public void setTraloi2(String traloi2) {
+        this.traloi2 = traloi2;
     }
 
 
-    public Question(int _id, String question, String ans_a, String ans_b, String ans_c, String ans_d, String result, int num_exam, String subject, String image, String traloi) {
+    public Question(int _id, String question, String ans_a, String ans_b, String ans_c, String ans_d, String subject,String image, String result1,String result2,  String traloi1, String traloi2, int num_exam) {
         this._id = _id;
         this.question = question;
         this.ans_a = ans_a;
         this.ans_b = ans_b;
         this.ans_c = ans_c;
         this.ans_d = ans_d;
-        this.result = result;
+        this.result1 = result1;
+        this.result2 = result2;
         this.num_exam = num_exam;
         this.subject = subject;
         this.image = image;
-        this.traloi= traloi;
+        this.traloi1= traloi1;
+        this.traloi2 =  traloi2;
     }
 
     public Question() {
@@ -94,14 +106,20 @@ public class Question implements Serializable{
         this.ans_d = ans_d;
     }
 
-    public String getResult() {
-        return result;
+    public String getResult1() {
+        return result1;
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    public void setResult1(String result1) {
+        this.result1 = result1;
+    }
+    public String getResult2() {
+        return result2;
     }
 
+    public void setResult2(String result2) {
+        this.result2 = result2;
+    }
     public int getNum_exam() {
         return num_exam;
     }

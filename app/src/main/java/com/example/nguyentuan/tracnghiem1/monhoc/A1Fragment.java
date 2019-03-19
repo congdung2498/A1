@@ -59,7 +59,7 @@ public class A1Fragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent= new Intent(getActivity(), ScreenSlideActivity.class);
                 intent.putExtra("num_exam",i+1);
-                intent.putExtra("subject","gdcd");
+                intent.putExtra("subject","A1");
                 intent.putExtra("test","yes");
                 startActivity(intent);
             }

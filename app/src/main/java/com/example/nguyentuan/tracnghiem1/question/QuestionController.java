@@ -26,8 +26,9 @@ public class QuestionController {
         do {
             Question item;
             item= new Question(cursor.getInt(0), cursor.getString(1),cursor.getString(2),cursor.getString(3),
-                    cursor.getString(4),cursor.getString(5),cursor.getString(6),cursor.getInt(7),cursor.getString(8),cursor.getString(9),"");
+                    cursor.getString(4),cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8),cursor.getString(9),"","",cursor.getInt(10));
             lsData.add(item);
+
         }while (cursor.moveToNext());
         return lsData;
     }

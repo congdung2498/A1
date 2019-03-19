@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
+
     <ScrollView
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -46,57 +47,50 @@
                 android:id="@+id/ivIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:padding="0dp"
-                android:layout_gravity="center"
                 android:visibility="visible" />
 
-            <RadioGroup
-                android:id="@+id/radGroup"
+            <CheckBox
+                android:id="@+id/checkBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp">
+                android:onClick="chose"
+                android:text="CheckBox"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
 
-                <RadioButton
-                    android:id="@+id/radA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
-                    android:textStyle="bold"
-                    android:text="Trả lời 1" />
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="chose"
+                android:text="CheckBox"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
 
-                <RadioButton
-                    android:id="@+id/radB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
-                    android:textStyle="bold"
-                    android:text="Trả lời 2" />
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="chose"
+                android:text="CheckBox"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
 
-                <RadioButton
-                    android:id="@+id/radC"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
-                    android:textStyle="bold"
-                    android:text="Trả lời 3" />
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="chose"
+                android:text="CheckBox"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
 
-                <RadioButton
-                    android:id="@+id/radD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
-                    android:textStyle="bold"
-                    android:text="Trả lời 4" />
-            </RadioGroup>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

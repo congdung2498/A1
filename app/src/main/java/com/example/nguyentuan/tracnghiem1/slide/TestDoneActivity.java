@@ -28,7 +28,7 @@ public class TestDoneActivity extends AppCompatActivity {
 
     ScoreController scoreController;
 
-    TextView tvTrue, tvFalse, tvNotAns, tvTotalScore;
+    TextView tvTrue, tvFalse, tvNotAns, tvTotalScore , tvResult;
     Button btnSaveScore, btnAgain, btnExit;
 
     @Override
@@ -39,6 +39,7 @@ public class TestDoneActivity extends AppCompatActivity {
 
         final Intent intent= getIntent();
         arr_QuesBegin= (ArrayList<Question>) intent.getExtras().getSerializable("arr_Ques");
+        System.out.println(arr_QuesBegin.get(0).getResult1() + "   "+arr_QuesBegin.get(0).getResult2() +"   "+ arr_QuesBegin.get(0).getTraloi1() +"   "+ arr_QuesBegin.get(0).getTraloi2());
         begin();
         checkResult();
         totalScore= numTrue*10;
@@ -122,7 +123,7 @@ public class TestDoneActivity extends AppCompatActivity {
 
     public void refresh(){
         for(int i=0; i<arr_QuesBegin.size(); i++){
-            arr_QuesBegin.get(i).setTraloi("");
+            arr_QuesBegin.get(i).setTraloi1("");
         }
     }
 
@@ -134,16 +135,27 @@ public class TestDoneActivity extends AppCompatActivity {
         btnAgain=(Button)findViewById(R.id.btnAgain);
         btnSaveScore=(Button)findViewById(R.id.btnSaveScore);
         btnExit=(Button)findViewById(R.id.btnExit);
+        tvResult = (TextView)findViewById(R.id.result);
     }
 
     //PT Check kết quả
     public void checkResult(){
+//        System.out.println("rs1 "+ arr_QuesBegin.get(0).getResult1() + "   rs2 " + arr_QuesBegin.get(0).getResult2() +"   tl1 "+ arr_QuesBegin.get(0).getResult1() +"   tl2 "+ arr_QuesBegin.get(0).getResult2());
         for(int i=0; i< arr_QuesBegin.size(); i++){
-            if(arr_QuesBegin.get(i).getTraloi().equals("")==true){
+//            System.out.println("rs1 "+ arr_QuesBegin.get(i).getResult1() + "   rs2 " + arr_QuesBegin.get(i).getResult2() +"   tl1 "+ arr_QuesBegin.get(i).getResult1() +"   tl2 "+ arr_QuesBegin.get(i).getResult2());
+            if(arr_QuesBegin.get(i).getTraloi1().equals("")==true && arr_QuesBegin.get(i).getTraloi2().equals("")==true){
                 numNoAns++;
-            }else if(arr_QuesBegin.get(i).getResult().equals(arr_QuesBegin.get(i).getTraloi())==true){
+            }else if(arr_QuesBegin.get(i).getResult1().equals(arr_QuesBegin.get(i).getTraloi1())==true && arr_QuesBegin.get(i).getResult2().equals(arr_QuesBegin.get(i).getTraloi2())==true ){
                 numTrue++;
             }else numFalse++;
+        }
+        if(numTrue >= 16){
+            tvResult.setText("Chúc mừng bạn đã đỗ");
+
+        }
+        else{
+            tvResult.setText("Rất tiếc bạn đã trượt");
+//            tvResult.setTextColor(Integer.parseInt("FF303F9F"));
         }
     }
 
