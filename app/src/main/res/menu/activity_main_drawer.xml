@@ -5,35 +5,35 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/home"
-            android:title="Home" />
+            android:title="Trang chủ" />
     </group>
 
-    <item android:title="Đề thi trắc nghiệm">
+    <item android:title="Chức năng ứng dụng">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/A1"
-                    android:icon="@drawable/cauhoi"
+                    android:icon="@drawable/test_a1"
                     android:title="Thi bằng A1" />
-                <item
-                    android:id="@+id/monly"
-                    android:icon="@drawable/tracnghiem"
-                    android:title="Môn Vật Lý" />
-                <item
-                    android:id="@+id/monhoa"
-                    android:icon="@drawable/cauhoi"
-                    android:title="Môn Hóa Học" />
-                <item
-                    android:id="@+id/monsinh"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="Môn Sinh Học" />
+                <!--<item-->
+                    <!--android:id="@+id/monly"-->
+                    <!--android:icon="@drawable/tracnghiem"-->
+                    <!--android:title="Môn Vật Lý" />-->
+                <!--<item-->
+                    <!--android:id="@+id/monhoa"-->
+                    <!--android:icon="@drawable/cauhoi"-->
+                    <!--android:title="Môn Hóa Học" />-->
+                <!--<item-->
+                    <!--android:id="@+id/monsinh"-->
+                    <!--android:icon="@drawable/ic_menu_send"-->
+                    <!--android:title="Môn Sinh Học" />-->
                 <item
                     android:id="@+id/search"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/search"
                     android:title="Tìm kiếm câu hỏi" />
                 <item
                     android:id="@+id/score"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/list"
                     android:title="Danh sách điểm" />
             </group>
         </menu>

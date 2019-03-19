@@ -117,9 +117,9 @@ public class MainActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
 
-        } else if (id == R.id.monly) {
-
-        } else if (id == R.id.monhoa) {
+//        } else if (id == R.id.monly) {
+//
+//        } else if (id == R.id.monhoa) {
 
         } else if (id == R.id.search) {
             SearchQuesFragment searchQuesFragment = new SearchQuesFragment();
