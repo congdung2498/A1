@@ -2,9 +2,6 @@ package com.example.nguyentuan.tracnghiem1.question;
 
 import java.io.Serializable;
 
-/**
- * Created by NguyenTuan on 11/10/2016.
- */
 
 public class Question implements Serializable{
     private  int _id;

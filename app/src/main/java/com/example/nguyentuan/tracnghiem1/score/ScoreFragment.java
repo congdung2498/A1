@@ -13,9 +13,6 @@ import android.widget.ListView;
 import com.example.nguyentuan.tracnghiem1.MainActivity;
 import com.example.nguyentuan.tracnghiem1.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ScoreFragment extends Fragment {
 
     ListView lvScore;

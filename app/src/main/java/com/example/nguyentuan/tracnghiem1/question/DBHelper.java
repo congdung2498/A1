@@ -1,9 +1,5 @@
 package com.example.nguyentuan.tracnghiem1.question;
 
-/**
- * Created by NguyenTuan on 11/10/2016.
- */
-
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

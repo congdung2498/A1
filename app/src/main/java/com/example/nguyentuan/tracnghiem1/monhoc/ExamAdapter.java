@@ -13,11 +13,9 @@ import com.example.nguyentuan.tracnghiem1.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by NguyenTuan on 11/10/2016.
- */
-
+//Kế thừa từ ArrayAdapter chứa mảng là đối tượng Exam
 public class ExamAdapter extends ArrayAdapter<Exam> {
+    //super() gọi hàm tạo lớp cha ArrayAdapter
     public ExamAdapter(Context context, ArrayList<Exam> exam) {
         super(context, 0, exam);
     }
@@ -25,8 +23,8 @@ public class ExamAdapter extends ArrayAdapter<Exam> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView==null){
-            LayoutInflater inflater=LayoutInflater.from(getContext());
-            convertView= inflater.inflate(R.layout.item_gridview, parent, false);
+            LayoutInflater inflater=LayoutInflater.from(getContext()); //Chuyển xml thành view
+            convertView= inflater.inflate(R.layout.item_gridview, parent, false);//tham số 1: xml muốn chuyển. TS2 nơi xml nhúng vào.ts3 true thì nhúng ngay vào viewgroup, flase không thêm ngay.
         }
         TextView tvName= (TextView) convertView.findViewById(R.id.tvNumExam);
         ImageView imgIcon= (ImageView) convertView.findViewById(R.id.imgIcon);

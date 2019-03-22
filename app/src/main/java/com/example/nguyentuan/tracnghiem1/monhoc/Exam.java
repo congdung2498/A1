@@ -1,8 +1,5 @@
 package com.example.nguyentuan.tracnghiem1.monhoc;
 
-/**
- * Created by NguyenTuan on 11/10/2016.
- */
 
 public class Exam {
     private String name;

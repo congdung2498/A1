@@ -13,9 +13,6 @@ import com.example.nguyentuan.tracnghiem1.question.Question;
 
 import java.util.ArrayList;
 
-/**
- * Created by tuanninh1307 on 11/14/2016.
- */
 
 public class CheckAnswerAdapter extends BaseAdapter{
 

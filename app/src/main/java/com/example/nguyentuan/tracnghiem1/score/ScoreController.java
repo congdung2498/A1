@@ -6,13 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.nguyentuan.tracnghiem1.question.DBHelper;
-import com.example.nguyentuan.tracnghiem1.question.Question;
-
-import java.util.ArrayList;
-
-/**
- * Created by NguyenTuan on 11/20/2016.
- */
 
 public class ScoreController {
     private DBHelper dbHelper;

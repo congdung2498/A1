@@ -33,7 +33,7 @@
             android:id="@+id/line_2"
             android:layout_below="@+id/viewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:weightSum="3">
@@ -51,6 +51,7 @@
                 android:background="#ffffff"/>
 
             <Button
+                android:id="@+id/btnBienBao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -60,12 +61,53 @@
                 android:textStyle="bold"
                 android:background="#ffffff"/>
             <Button
+                android:id="@+id/btnLyThuyet"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/icon_2"
                 android:background="#ffffff"
                 android:text="Lý thuyết"
+                android:textSize="12dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_3"
+            android:layout_below="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
+            <Button
+                android:id="@+id/btnMeo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/meo"
+                android:text="Mẹo"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="#ffffff"/>
+
+            <Button
+                android:id="@+id/btnTraCuuLuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/tra_cuu_luat"
+                android:text="Tra cứu luật"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:background="#ffffff"/>
+            <Button
+                android:id="@+id/btnCauHaySai"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/cau_hay_sai"
+                android:background="#ffffff"
+                android:text="Câu hay sai"
                 android:textSize="12dp"
                 android:textStyle="bold"/>
         </LinearLayout>

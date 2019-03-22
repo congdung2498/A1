@@ -50,17 +50,17 @@ public class MainActivity extends AppCompatActivity
 
         DBHelper db = new DBHelper(this);
 
-//        try {
-//            db.deleteDataBase();
-//            Toast.makeText(this, "Xóa thành công", Toast.LENGTH_SHORT).show();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//            Toast.makeText(this, "bi loi rui", Toast.LENGTH_SHORT).show();
-//        }
+        try {
+            db.deleteDataBase();
+            Toast.makeText(this, "Xóa thành công", Toast.LENGTH_SHORT).show();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "bi loi rui", Toast.LENGTH_SHORT).show();
+        }
 
         try {
             db.createDataBase();
-//            Toast.makeText(this, "Coppy thành công", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Coppy thành công", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -107,12 +107,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.home) {
-            // Handle the camera action
+        if (id == R.id.home) {// Chạy vào trang chủ khi click vào trang chủ
             HomeFragment homeFragment = new HomeFragment();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.content_main, homeFragment, homeFragment.getTag()).commit();
-        } else if (id == R.id.A1) {
+            //Mỗi activity có FragmentManager để quản lý fragment
+            //Lấy ra một đối tượng FragmentManager. Lớp FragmentManager cho phép thêm sửa xóa fragment trong layout của activity
+            FragmentManager manager = getSupportFragmentManager();//Dùng getSupport hoặc get
+            //manager.begin... cho phép CRUD
+            //ta cũng có theer đặt FragmentTransaction(đói tượng quản lý CRUD)
+            //Thay thế 1 content main và replace thay thế fragment cũ bằng 1 fragment mới đó là contentmain
+            manager.beginTransaction().replace(R.id.content_main, homeFragment).commit();//co the thêm , homeFragment.getTag()
+        } else if (id == R.id.A1) {//Chạy vào mục thi trắc nghiệm a1
             A1Fragment a1Fragment = new A1Fragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();

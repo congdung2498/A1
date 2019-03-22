@@ -22,9 +22,6 @@ import com.example.nguyentuan.tracnghiem1.R;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SearchQuesFragment extends Fragment {
 
     ListView lvQuestion;

@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.example.nguyentuan.tracnghiem1.R;
 
-/**
- * Created by NguyenTuan on 11/20/2016.
- */
 
 public class ScoreAdapter extends CursorAdapter{
     public ScoreAdapter(Context context, Cursor c, boolean autoRequery) {

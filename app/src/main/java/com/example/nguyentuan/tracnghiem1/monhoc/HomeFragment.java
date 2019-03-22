@@ -1,6 +1,5 @@
 package com.example.nguyentuan.tracnghiem1.monhoc;
 
-
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,6 +17,7 @@ import android.widget.ViewFlipper;
 
 import com.example.nguyentuan.tracnghiem1.MainActivity;
 import com.example.nguyentuan.tracnghiem1.R;
+import com.example.nguyentuan.tracnghiem1.Tips.TipsFragment;
 import com.example.nguyentuan.tracnghiem1.score.ScoreAdapter;
 import com.example.nguyentuan.tracnghiem1.score.ScoreController;
 
@@ -25,8 +25,10 @@ import com.example.nguyentuan.tracnghiem1.score.ScoreController;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-    private Button btnA1;
-    ViewFlipper viewFlipper;
+
+    private ViewFlipper viewFlipper;
+
+    private Button btnA1, btnBienBao, btnLyThuyet, btnMeo, btnTraCuuLuat, btnCauHaySai;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -44,6 +46,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        viewFlipper=(ViewFlipper)getActivity().findViewById(R.id.viewFlipper);
+        viewFlipper.setFlipInterval(3000);
+        viewFlipper.setAutoStart(true);
+
         btnA1 = (Button) getActivity().findViewById(R.id.btnA1);
         btnA1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,9 +60,51 @@ public class HomeFragment extends Fragment {
                 manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
             }
         });
-        viewFlipper=(ViewFlipper)getActivity().findViewById(R.id.viewFlipper);
-        viewFlipper.setFlipInterval(3000);
-        viewFlipper.setAutoStart(true);
+        btnBienBao = (Button) getActivity().findViewById(R.id.btnBienBao);
+        btnBienBao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A1Fragment a1Fragment = new A1Fragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+            }
+        });
+        btnLyThuyet = (Button) getActivity().findViewById(R.id.btnLyThuyet);
+        btnLyThuyet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A1Fragment a1Fragment = new A1Fragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+            }
+        });
+        btnMeo = (Button) getActivity().findViewById(R.id.btnMeo);
+        btnMeo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TipsFragment tipsFragment = new TipsFragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, tipsFragment, tipsFragment.getTag()).commit();
+            }
+        });
+        btnTraCuuLuat = (Button) getActivity().findViewById(R.id.btnTraCuuLuat);
+        btnTraCuuLuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A1Fragment a1Fragment = new A1Fragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+            }
+        });
+        btnCauHaySai = (Button) getActivity().findViewById(R.id.btnCauHaySai);
+        btnCauHaySai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A1Fragment a1Fragment = new A1Fragment();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+            }
+        });
     }
 
 }

@@ -6,9 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-/**
- * Created by tuanninh1307 on 11/12/2016.
- */
 
 public class QuestionController {
     private DBHelper dbHelper;

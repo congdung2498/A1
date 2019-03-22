@@ -28,18 +28,19 @@ public class A1Fragment extends Fragment {
     ArrayList<Exam> arr_exam= new ArrayList<Exam>();
 
     public A1Fragment() {
-        // Required empty public constructor
+
     }
 
-
+    //Tạo và trả về view fragment tương ứng
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         ((MainActivity) getActivity()).getSupportActionBar().setTitle("Thi bằng lái xe A1");
-        return inflater.inflate(R.layout.fragment_toan_hoc, container, false);
+        return inflater.inflate(R.layout.fragment_a1, container, false);
     }
 
+    //Hoàn thành nốt việc khởi tạo
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

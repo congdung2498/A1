@@ -1,8 +1,5 @@
 package com.example.nguyentuan.tracnghiem1.score;
 
-/**
- * Created by NguyenTuan on 11/20/2016.
- */
 
 public class Score {
     private int id;
