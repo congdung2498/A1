@@ -52,7 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    private boolean checkDataBase() {
+    public boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
 
         try {

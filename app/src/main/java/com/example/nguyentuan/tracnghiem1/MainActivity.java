@@ -49,21 +49,27 @@ public class MainActivity extends AppCompatActivity
         manager.beginTransaction().replace(R.id.content_main, homeFragment, homeFragment.getTag()).commit();
 
         DBHelper db = new DBHelper(this);
+        if(db.checkDataBase()){
+            try {
+                db.deleteDataBase();
+            } catch (SQLException e) {
+                e.printStackTrace();
 
-        try {
-            db.deleteDataBase();
-            Toast.makeText(this, "Xóa thành công", Toast.LENGTH_SHORT).show();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "bi loi rui", Toast.LENGTH_SHORT).show();
+            }
+
+            try {
+                db.createDataBase();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            try {
+                db.createDataBase();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
-        try {
-            db.createDataBase();
-            Toast.makeText(this, "Coppy thành công", Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
     }
 

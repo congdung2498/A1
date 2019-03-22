@@ -103,11 +103,11 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="Chơi lại"
+            android:id="@+id/btnAgain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAgain"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Thi lại" />
 
         <Button
             android:text="Thoát"

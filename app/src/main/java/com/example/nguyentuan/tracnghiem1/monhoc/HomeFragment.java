@@ -13,11 +13,13 @@ import android.widget.ImageButton;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.ViewFlipper;
 
 import com.example.nguyentuan.tracnghiem1.MainActivity;
 import com.example.nguyentuan.tracnghiem1.R;
 import com.example.nguyentuan.tracnghiem1.Tips.TipsFragment;
+import com.example.nguyentuan.tracnghiem1.question.SearchQuesFragment;
 import com.example.nguyentuan.tracnghiem1.score.ScoreAdapter;
 import com.example.nguyentuan.tracnghiem1.score.ScoreController;
 
@@ -73,9 +75,9 @@ public class HomeFragment extends Fragment {
         btnLyThuyet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A1Fragment a1Fragment = new A1Fragment();
+                SearchQuesFragment searchQuesFragment = new SearchQuesFragment();
                 FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.content_main, searchQuesFragment, searchQuesFragment.getTag()).commit();
             }
         });
         btnMeo = (Button) getActivity().findViewById(R.id.btnMeo);
@@ -87,24 +89,7 @@ public class HomeFragment extends Fragment {
                 manager.beginTransaction().replace(R.id.content_main, tipsFragment, tipsFragment.getTag()).commit();
             }
         });
-        btnTraCuuLuat = (Button) getActivity().findViewById(R.id.btnTraCuuLuat);
-        btnTraCuuLuat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                A1Fragment a1Fragment = new A1Fragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
-            }
-        });
-        btnCauHaySai = (Button) getActivity().findViewById(R.id.btnCauHaySai);
-        btnCauHaySai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                A1Fragment a1Fragment = new A1Fragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
-            }
-        });
+
     }
 
 }
