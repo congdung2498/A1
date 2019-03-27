@@ -22,6 +22,7 @@ import com.example.nguyentuan.tracnghiem1.Tips.TipsFragment;
 import com.example.nguyentuan.tracnghiem1.question.SearchQuesFragment;
 import com.example.nguyentuan.tracnghiem1.score.ScoreAdapter;
 import com.example.nguyentuan.tracnghiem1.score.ScoreController;
+import com.example.nguyentuan.tracnghiem1.symbol.SymbolFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,9 +67,9 @@ public class HomeFragment extends Fragment {
         btnBienBao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A1Fragment a1Fragment = new A1Fragment();
+                SymbolFragment symbolFragment = new SymbolFragment();
                 FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.content_main, a1Fragment, a1Fragment.getTag()).commit();
+                manager.beginTransaction().replace(R.id.content_main, symbolFragment, symbolFragment.getTag()).commit();
             }
         });
         btnLyThuyet = (Button) getActivity().findViewById(R.id.btnLyThuyet);

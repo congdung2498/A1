@@ -22,6 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private SQLiteDatabase myDataBase;
     private final Context myContext;
+    private static final String TABLE_NAME = "tbl_symbol";
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DATABASE_VERSION);
@@ -116,7 +117,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        String drop_symbols_table = String.format("DROP TABLE IF EXISTS %s", TABLE_NAME);
+        db.execSQL(drop_symbols_table);
 
+        onCreate(db);
     }
 }
 
