@@ -95,19 +95,13 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public void createDataBase() throws IOException {
-        boolean dbExist = checkDataBase(); //kiem tra db
-
-        if (dbExist) {
-            //khong lam gi ca, database da co roi
-//            copyDataBase();
-        } else {
             this.getReadableDatabase();
             try {
                 copyDataBase(); //chep du lieu
             } catch (IOException e) {
                 throw new Error("Error copying database");
             }
-        }
+
     }
 
     @Override

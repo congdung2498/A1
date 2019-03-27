@@ -48,10 +48,6 @@ public class A1Fragment extends Fragment {
         gvExam=(GridView) getActivity().findViewById(R.id.gvExam);
         arr_exam.add(new Exam("Đề số 1"));
         arr_exam.add(new Exam("Đề số 2"));
-        arr_exam.add(new Exam("Đề số 3"));
-        arr_exam.add(new Exam("Đề số 4"));
-        arr_exam.add(new Exam("Đề số 5"));
-        arr_exam.add(new Exam("Đề số 6"));
 
         examAdapter=new ExamAdapter(getActivity(),arr_exam);
         gvExam.setAdapter(examAdapter);
