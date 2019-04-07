@@ -13,7 +13,6 @@ public class Question implements Serializable{
     private  String result1;
     private  String result2;
     private  int num_exam;
-    private  String subject;
     private  String image;
     private String traloi1="";
     private String traloi2="";
@@ -36,7 +35,7 @@ public class Question implements Serializable{
     }
 
 
-    public Question(int _id, String question, String ans_a, String ans_b, String ans_c, String ans_d, String subject,String image, String result1,String result2,  String traloi1, String traloi2, int num_exam) {
+    public Question(int _id, String question, String ans_a, String ans_b, String ans_c, String ans_d,String image, String result1,String result2,  String traloi1, String traloi2, int num_exam) {
         this._id = _id;
         this.question = question;
         this.ans_a = ans_a;
@@ -46,7 +45,6 @@ public class Question implements Serializable{
         this.result1 = result1;
         this.result2 = result2;
         this.num_exam = num_exam;
-        this.subject = subject;
         this.image = image;
         this.traloi1= traloi1;
         this.traloi2 =  traloi2;
@@ -123,14 +121,6 @@ public class Question implements Serializable{
 
     public void setNum_exam(int num_exam) {
         this.num_exam = num_exam;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
     }
 
     public String getImage() {

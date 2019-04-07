@@ -68,8 +68,8 @@ public class ScreenSlideActivity extends FragmentActivity {
         mPager.setPageTransformer(true, new DepthPageTransformer());
 
         Intent intent = getIntent();
-        subject = intent.getStringExtra("subject");
         num_exam = intent.getIntExtra("num_exam", 0);
+        System.out.println("id exam: "+num_exam);
         test= intent.getStringExtra("test");
 
         totalTimer = 10;
@@ -78,7 +78,8 @@ public class ScreenSlideActivity extends FragmentActivity {
         arr_Ques = new ArrayList<Question>();
 
         if(test.equals("yes")==true) {
-            arr_Ques = questionController.getQuestion(num_exam, subject);
+            arr_Ques = questionController.getQuestion(num_exam);
+            System.out.println(arr_Ques);
         }else{
             arr_Ques= (ArrayList<Question>) intent.getExtras().getSerializable("arr_Ques");
         }

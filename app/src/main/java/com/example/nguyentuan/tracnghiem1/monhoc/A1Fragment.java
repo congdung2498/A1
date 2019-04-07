@@ -26,7 +26,7 @@ public class A1Fragment extends Fragment {
     ExamAdapter examAdapter;
     GridView gvExam;
     ArrayList<Exam> arr_exam= new ArrayList<Exam>();
-
+    ExamController examController;
     public A1Fragment() {
 
     }
@@ -45,22 +45,21 @@ public class A1Fragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        gvExam=(GridView) getActivity().findViewById(R.id.gvExam);
-        arr_exam.add(new Exam("Đề số 1"));
-        arr_exam.add(new Exam("Đề số 2"));
+        gvExam = (GridView) getActivity().findViewById(R.id.gvExam);
+        examController = new ExamController(getActivity());
+        arr_exam = examController.getExam();
 
         examAdapter=new ExamAdapter(getActivity(),arr_exam);
         gvExam.setAdapter(examAdapter);
-        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent= new Intent(getActivity(), ScreenSlideActivity.class);
-                intent.putExtra("num_exam",i+1);
-                intent.putExtra("subject","A1");
-                intent.putExtra("test","yes");
-                startActivity(intent);
-            }
-        });
+//        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent= new Intent(getActivity(), ScreenSlideActivity.class);
+//                intent.putExtra("num_exam",i);
+//                intent.putExtra("test","yes");
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
