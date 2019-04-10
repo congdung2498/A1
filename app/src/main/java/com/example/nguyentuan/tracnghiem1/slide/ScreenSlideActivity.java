@@ -65,7 +65,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
-        mPager.setPageTransformer(true, new DepthPageTransformer());
+//        mPager.setPageTransformer(true, new DepthPageTransformer());
 
         Intent intent = getIntent();
         num_exam = intent.getIntExtra("num_exam", 0);
@@ -117,7 +117,7 @@ public class ScreenSlideActivity extends FragmentActivity {
     }
 
     public void dialogExit(){
-        final AlertDialog.Builder builder=new AlertDialog.Builder(ScreenSlideActivity.this);
+        AlertDialog.Builder builder=new AlertDialog.Builder(ScreenSlideActivity.this);
         builder.setIcon(R.drawable.exit);
         builder.setTitle("Thông báo");
         builder.setMessage("Bạn có muốn thoát hay không?");
@@ -157,42 +157,6 @@ public class ScreenSlideActivity extends FragmentActivity {
         }
     }
 
-    public class DepthPageTransformer implements ViewPager.PageTransformer {
-        private static final float MIN_SCALE = 0.75f;
-
-        public void transformPage(View view, float position) {
-            int pageWidth = view.getWidth();
-
-            if (position < -1) { // [-Infinity,-1)
-                // This page is way off-screen to the left.
-                view.setAlpha(0);
-
-            } else if (position <= 0) { // [-1,0]
-                // Use the default slide transition when moving to the left page
-                view.setAlpha(1);
-                view.setTranslationX(0);
-                view.setScaleX(1);
-                view.setScaleY(1);
-
-            } else if (position <= 1) { // (0,1]
-                // Fade the page out.
-                view.setAlpha(1 - position);
-
-                // Counteract the default slide transition
-                view.setTranslationX(pageWidth * -position);
-
-                // Scale the page down (between MIN_SCALE and 1)
-                float scaleFactor = MIN_SCALE
-                        + (1 - MIN_SCALE) * (1 - Math.abs(position));
-                view.setScaleX(scaleFactor);
-                view.setScaleY(scaleFactor);
-
-            } else { // (1,+Infinity]
-                // This page is way off-screen to the right.
-                view.setAlpha(0);
-            }
-        }
-    }
 
 
     //Dialog hiện thị danh sách những câu trả lời và chưa trả lời...

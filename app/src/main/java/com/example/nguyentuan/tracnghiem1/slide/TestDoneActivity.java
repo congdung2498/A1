@@ -29,7 +29,7 @@ public class TestDoneActivity extends AppCompatActivity {
     ScoreController scoreController;
 
     TextView tvTrue, tvFalse, tvNotAns, tvTotalScore , tvResult;
-    Button btnSaveScore, btnAgain, btnExit;
+    Button btnSaveScore, btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,32 +107,16 @@ public class TestDoneActivity extends AppCompatActivity {
             }
         });
 
-        btnAgain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                refresh();
-                finish();
-                Intent intent2= new Intent(TestDoneActivity.this, ScreenSlideActivity.class);
-                intent2.putExtra("arr_Ques",arr_QuesBegin);
-                intent2.putExtra("test","no");
-                startActivity(intent2);
-            }
-        });
+
 
     }
 
-    public void refresh(){
-        for(int i=0; i<arr_QuesBegin.size(); i++){
-            arr_QuesBegin.get(i).setTraloi1("");
-        }
-    }
 
     public void begin(){
         tvFalse= (TextView)findViewById(R.id.tvFalse);
         tvTrue= (TextView)findViewById(R.id.tvTrue);
         tvNotAns= (TextView)findViewById(R.id.tvNotAns);
         tvTotalScore= (TextView)findViewById(R.id.tvTotalPoint);
-        btnAgain=(Button)findViewById(R.id.btnAgain);
         btnSaveScore=(Button)findViewById(R.id.btnSaveScore);
         btnExit=(Button)findViewById(R.id.btnExit);
         tvResult = (TextView)findViewById(R.id.result);
