@@ -70,19 +70,14 @@ public class ScreenSlideActivity extends FragmentActivity {
         Intent intent = getIntent();
         num_exam = intent.getIntExtra("num_exam", 0);
         System.out.println("id exam: "+num_exam);
-        test= intent.getStringExtra("test");
 
         totalTimer = 10;
         timer = new CounterClass(totalTimer * 60 * 1000, 1000);
         questionController = new QuestionController(this);
         arr_Ques = new ArrayList<Question>();
 
-        if(test.equals("yes")==true) {
             arr_Ques = questionController.getQuestion(num_exam);
             System.out.println(arr_Ques);
-        }else{
-            arr_Ques= (ArrayList<Question>) intent.getExtras().getSerializable("arr_Ques");
-        }
 
         tvKiemtra = (TextView) findViewById(R.id.tvKiemTra);
         tvTimer = (TextView) findViewById(R.id.tvTimer);

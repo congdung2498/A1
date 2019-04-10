@@ -37,21 +37,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void deleteDataBase() {
         String myPath = DB_PATH + DB_NAME;
         SQLiteDatabase.deleteDatabase(new File(myPath));
     }
 
-    @Override
-    public synchronized void close() {
-
-        if (myDataBase != null)
-            myDataBase.close();
-
-        super.close();
-
-    }
+//    @Override
+//    public synchronized void close() {
+//
+//        if (myDataBase != null)
+//            myDataBase.close();
+//
+//        super.close();
+//
+//    }
 
     public boolean checkDataBase() {
         SQLiteDatabase checkDB = null;

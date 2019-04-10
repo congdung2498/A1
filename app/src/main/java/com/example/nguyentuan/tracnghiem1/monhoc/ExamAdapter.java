@@ -44,7 +44,6 @@ public class ExamAdapter extends ArrayAdapter<Exam> {
 
                 Intent intent = new Intent(getContext(), ScreenSlideActivity.class);
                 intent.putExtra("num_exam",p.getId());
-                intent.putExtra("test","yes");
                 getContext().startActivity(intent);
 
 // Yêu cầu start Activity chỉ định trong Intent.
